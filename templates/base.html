@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> {% block css %} {% endblock %}
+    <title></title>
+</head>
+
+<body>
+    <div class="container mt-2">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand font-weight-bold text-primary" href="#">PS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item pr-3">
+                        <a class="btn btn-outline-success text-dark font-weight-bold" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success font-weight-bold text-dark" href="{% url 'project_list' %}">Projects</a>
+                    </li>
+                </ul>
+                <nav class="navbar navbar-right">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a href="{% url 'contact' %}" class="btn btn-outline-light text-dark font-weight-bold">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <div class="container mt5">
+        {% block content %} {% endblock %}
+    </div>
+    <div style="width: 100%;margin-top: 100px;background-color: white;">
+        <div class="jumbotron bg-transparent text-center">
+            <h4>Thanks for visiting</h4>
+            <br>
+            <img src="{% static 'images/Googleplus.png' %}" width="40px" height="40px">
+            <img src="{% static 'images/Github.png' %}" width="40px" height="40px">
+            <img src="{% static 'images/Linkedin.png' %}" width="40px" height="40px">
+            <br>
+            <br>
+            <h3 class=" text-primary font-italic">srivastavapratyush@outlook.com</h3>
+        </div>
+    </div>
+</body>
+
+</html>

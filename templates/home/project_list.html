@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main2.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="jumbotron bg-dark text-primary">
+        <ul>
+            <li><a href="{% url 'iot' %}">A Smart Mirror using raspberry pi.</a></li>
+        </ul>
+        </div>
+    </div>
+            
+
+{% endblock %}

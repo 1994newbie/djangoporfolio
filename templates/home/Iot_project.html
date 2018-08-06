@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main2.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="container">
+            <img src="{% static 'images/iot.jpg' %}" width="100%;" height="300px;">
+        </div>
+        <br>
+        <h4 class="text-primary">Smart Mirror</h4>
+        <div class="jumbotron bg-dark text-light">
+                <h6>Objective</h6>
+                <hr class="my-4">
+                <p>Smart-Mirror is basically an LCD panel sandwiched between a observational mirror that allows act
+                    as a one-way mirror and a wooden frame that displays real-time information. The whole system was 
+                    powered by raspberry pi 3.<br>
+                    Our goal was to develop the user-interface from scratch and to add some extra functionalities to it in order to improve the efficiency.
+                </p>
+            
+              </div>
+        <div class="jumbotron text-dark">
+                <h6>Functionalities added</h6>
+                <hr class="my-4">
+                <p><ul>
+                    <li>The user interface was developed using tkinter(GUI) library in python. </li>
+                    <li>Ultrasonic sensor was used detect objects in front of the mirror and toggle the screen on/off.</li>
+                    <li>Pulse-rate sensor was used detect pulse-rate and display it on the mirror.</li>
+                    <li>LDR sensor was used to automatically switch on/off lights.</li>
+                    <li>Some extra information like top 3 emails, weather info, news feed were added using API's.</li>
+                </ul>
+                </p>
+            
+              </div>
+              <img src="{%static 'images/iot2.jpg'%}" width="30%" height="50%">
+              <img src="{%static 'images/iot3.PNG'%}" width="35%" height="50%">
+              <img  src="{% static 'images/iot1.jpg' %}" width="30%" height="50%">
+        </div>
+{% endblock %}

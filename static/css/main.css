@@ -1,0 +1,13 @@
+body { 
+    background: url("/static/images/Wall7.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #img:hover{
+      width: 200px;
+      height: 200px;
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+  }
